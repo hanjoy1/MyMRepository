@@ -145,7 +145,7 @@ grid on
 %¹ì¼£
 figure(3)
 axis equal
-plot3(Ne,Ee,De)
+plot3(Ne,Ee,-De)
 xlabel('N')
 ylabel('E')
 zlabel('H')
