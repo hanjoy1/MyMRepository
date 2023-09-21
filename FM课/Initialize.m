@@ -57,8 +57,16 @@ x7 = simX.Data(:,7);
 x8 = simX.Data(:,8);
 x9 = simX.Data(:,9);
 
+Ne = simPos_e.Data(:,1);
+Ee = simPos_e.Data(:,2);
+De = simPos_e.Data(:,3);
+
+Phi = simPos_G.Data(:,1);
+Lam = simPos_G.Data(:,2);
+H = simPos_G.Data(:,3);
+
 %  ‰»Î
-figure
+figure(1)
 subplot(5,1,1)
 plot(t,u1)
 legend('u_1')
@@ -86,7 +94,7 @@ grid on
 
 % ◊¥Ã¨
 %
-figure
+figure(2)
 subplot(3,3,1)
 plot(t,x1)
 legend('x_1')
@@ -131,8 +139,25 @@ grid on
 
 subplot(3,3,9)
 plot(t,x9)
-legend('x_9')
+legend('x_9')  
 grid on
+
+%πÏº£
+figure(3)
+axis equal
+plot3(Ne,Ee,De)
+xlabel('N')
+ylabel('E')
+zlabel('H')
+
+figure(4)
+subplot(1,2,1)
+plot(Phi,Lam);
+subplot(1,2,2)
+plot(t,H);
+
+
+
 
 
 
